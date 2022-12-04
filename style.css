@@ -1,0 +1,87 @@
+#capture{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family: 'Inconsolata', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
+}
+#prognosis{
+    background: linear-gradient(to right, transparent, rgb(58, 106, 95));
+    /* url("https://mdn.mozillademos.org/files/15525/critters.png"); */
+    box-shadow: inset 0 0 25px rgba(101, 114, 126, 50), inset 0 0 25px rgba(140, 150, 170, 50), inset 0 0 25px rgb(83, 94, 104), inset 0 0 25px rgb(86, 96, 106);
+
+}
+#backgroundPicture{
+background-image: url(/pictures/wallpaperflare.com_wallpaper.jpg);
+height: 800px;
+max-width: 1400px;
+background-repeat: no-repeat;
+background-size: 100%;
+border: solid black 1px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+#prognosis{
+    background-color: whitesmoke;
+    height:fit-content;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+}
+
+
+#changeTown{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+
+#information{
+    display: flex;
+    justify-content: space-between;
+}
+#weatherComponets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#weatherComponets div{
+    display: flex;
+justify-content: space-between;
+}
+
+#informationTowm{
+    width: 30%;
+    margin-left: 15px;
+}
+
+#temperatureDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#townPictures{
+    width: 61%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

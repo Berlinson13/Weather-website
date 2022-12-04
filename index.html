@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style_btn.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat:wght@400;600;700&family=Pacifico&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <title>Прогноз погоди</title>
+
+</head>
+<body>
+    <div id="backgroundPicture">
+        <!-- Задній фон -->
+        
+        <div id="prognosis">
+            <!-- Загальний блок -->
+            <div id="capture">ПРОГНОЗ ПОГОДИ</div>
+            <div id="changeTown">
+                <!-- Вибір міста і назва міста -->
+                <div id="townName"></div>
+                <div id="metrix">
+                    <label for="m">Цельсий</label>
+                    <input type="radio" name="typeMetrix" id="m" value="metric" checked>
+                    <label for="f">Фаренгейт</label>
+                    <input type="radio" name="typeMetrix" id="f" value="imperial">
+                </div>
+                <div id="dropdown">
+                    <button class="drobtn">Вибрати місто</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p id="kyivClick">Київ</p>
+                        <p id="newYorkClick">Нью-Йорк</p>
+                        <p id="londonClick">Лондон</p>
+                      </div>
+                    </div>
+            </div>
+            <template id="zero_template"></template>
+            <template id="template">
+                <!--  Інформація  -->
+                <div id="informationTowm">
+                    <p>{{name}}</p>
+                    <div id="temperatureDiv">
+                        <div id="temperature">{{temp}} градусів </div>
+                        <div id="cloudPhoto"><img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" alt=""></div>
+                        <div id="cloudType">{{cloud}}</div>
+                    </div>
+                  <!--  Інформація про стан погоди -->  
+                  <div id="weatherComponets"> 
+                    <div><p id="windType">Напрям вітру</p><p>{{wind}} градусів</p></div>
+                    <div><p id=" windSpeed">Швидкість вітру</p><p>{{speed}} м/c</p></div>
+                    <div><p id-="pressure">Тиск</p><p>{{pressure}} атм</p></div>
+                    <div><p id="eastTime">Схід сонця</p><p>{{eastTime}} год</p></div> 
+                    <div><p id="westTime">Захід сонця</p><p>{{westTime}} год</p></div>
+                </div>
+                 
+                </div>
+                <div id="townPictures">
+                   <!--  Фон міста --> 
+                </div>
+            </template>
+                <div id="information">
+           
+    </div>
+    <script src="/Mustache/mustache.min.js"></script>
+   <script src="./js.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование mustache.js</title>
+</head>
+
+<body>
+    <button>Click me!</button>
+    <div id="target"></div>
+
+    <!--
+        HTML разметка в теге script не выполняется
+        Атрибут type="x-tmpl-mustache" нужен, чтобы браузер не воспринимал содержимое как JS код
+    -->
+    <script id="template" type="x-tmpl-mustache">
+        Hello {{name}}!
+    </script>
+
+    <!-- альтернативный вариант с использованием элемента template -->
+    <!-- <template id="template">
+        Hello {{name}}!
+    </template> -->
+    
+    <script src="mustache.min.js"></script>
+    <script>
+        document.querySelector("button").addEventListener("click", renderHello);
+        
+        function renderHello() {
+            let template = document.querySelector("#template").innerHTML;
+            let rendered = Mustache.render(template, { name: "Dmitriy" });
+            document.getElementById("target").innerHTML = rendered;
+        }
+    </script>
+
+    
+</body>
+
+</html>
